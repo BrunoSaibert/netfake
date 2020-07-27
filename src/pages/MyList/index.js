@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 
 import CardMovie from '../../components/CardMovie';
 
