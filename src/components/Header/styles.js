@@ -1,20 +1,31 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const HeaderSize = styled.div`
-  height: 70px;
-`;
-
-export const Header = styled.header`
+export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   padding: 0 4%;
-  height: 68px;
+  height: 70px;
   margin: 0 auto;
   font-size: 14px;
+  transition: all 0.4s ease-in-out;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0));
+
+  ${prop =>
+    prop.scrolled &&
+    css`
+      background: rgba(0, 0, 0);
+    `}
 `;
 
-export const Div = styled.div`
+export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,10 +39,10 @@ export const Logo = styled.img`
 export const Nav = styled.ul`
   display: flex;
   align-items: center;
+  list-style: none;
 `;
 
 export const NavLink = styled.li`
-  list-style: none;
   margin-left: 20px;
 
   a {
@@ -55,8 +66,8 @@ export const Actions = styled.div`
   display: flex;
   align-items: center;
 
-  & :not(:last-child) {
-    margin-right: 22px;
+  & > * {
+    margin-left: 22px;
   }
 
   svg {
