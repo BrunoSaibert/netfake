@@ -10,6 +10,7 @@ export const Container = styled.header`
   left: 0;
   right: 0;
 
+  z-index: 99;
   padding: 0 4%;
   height: 70px;
   margin: 0 auto;
