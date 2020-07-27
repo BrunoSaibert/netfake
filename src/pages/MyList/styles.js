@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 100px 4% 0;
+  padding: 90px 4% 0;
 `;
 
 export const MovieList = styled.div`
